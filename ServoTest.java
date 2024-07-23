@@ -30,7 +30,7 @@ public class ServoTest extends LinearOpMode {
  
         while (opModeIsActive()) {
             //arm and gripper controls
-           double armPower = 0.0;
+            double armPower = 0.0;
             if (gamepad1.right_bumper) {
                 armPower = 0.4; // moves arm up
             } 
@@ -43,8 +43,9 @@ public class ServoTest extends LinearOpMode {
             } else if (gamepad1.left_trigger > 0.1) {
                 gripperPower = 0.5; // closes the gripper
             }
-            
-            armMotor.setPosition((armPower + 1) /2); // Convert to a range of 0 to 1
+
+            telemetry.addData("arm position", armMotor.getPosition());
+            armMotor.setPosition(armPower); // Convert to a range of 0 to 1
             gripperMotor.setPosition((gripperPower + 1) / 2); // Convert to a range of 0 to 1
         }
     }
