@@ -71,32 +71,32 @@ public class AutoOpMode extends LinearOpMode {
       // Wait for the game to start (driver presses PLAY)
       waitForStart();
 
-      encoderDrive(DRIVE_SPEED, 69, 69, 69, 69, 2.5); // drive forward
-      encoderDrive(DRIVE_SPEED, -10, 10, 10, -10, 1.0); // strafe left
+      encoderDrive(DRIVE_SPEED, -10, 10, 10, -10, 1.0); //strafe left 
+      encoderDrive(DRIVE_SPEED, 74, 74, 74, 74, 2.5); // drive forward
       // //open gripper/place 
-      // gripperMotor.setPosition(-1.0);
+      gripperMotor.setPosition(-1.0);
       // encoderDrive(DRIVE_SPEED, -60, -60, -60, -60, 1.0); // drive backwards
-      // encoderDrive(DRIVE_SPEED, 12, -12, -12, 12, 1.0); // strafe right
+      // encoderDrive(DRIVE_SPEED, 10, -10, -10, 10, 1.0); // strafe right
       // encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
       // //close gripper/grab cone
-      // // gripperMotor.setPosition(1.0);
-      // encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
-      // encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
-      // encoderDrive(DRIVE_SPEED, -22, 22, 22, -22, 1.0); // strafe left
-      // //open gripper/place cone
-      // // gripperMotor.setPosition(-1.0);
-      // encoderDrive(DRIVE_SPEED, -69, -69, -69, -69, 1.0); // drive backwards
-      // encoderDrive(DRIVE_SPEED, 20, -20, -20, 20, 1.0); // strafe right
-      // encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
+      gripperMotor.setPosition(1.0);
+      encoderDrive(DRIVE_SPEED, -13, -13, -13, -13, 1.0)
+      encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
+      encoderDrive(DRIVE_SPEED, 70, 70, 70, 70, 2.3);
+      //open gripper/place cone
+      gripperMotor.setPosition(-1.0);
+      encoderDrive(DRIVE_SPEED, -60, -60, -60, -60, 1.0); // drive backwards
+      encoderDrive(DRIVE_SPEED, 12, -12, -12, 12, 1.0); // strafe right
+      encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
       // //close gripper/grab cone
-      // // gripperMotor.setPosition(1.0);
-      // encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
-      // encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
-      // encoderDrive(DRIVE_SPEED, -30, 30, 30, -30, 1.0); // strafe left
-      // //open gripper/place cone
-      // // gripperMotor.setPosition(-1.0);
-      // encoderDrive(DRIVE_SPEED, -69, -69, -69, -69, 1.0); // drive backwards
-      // encoderDrive(DRIVE_SPEED, 30, -30, -30, 30, 1.0); // strafe right
+      gripperMotor.setPosition(1.0);
+      encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
+      encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
+      encoderDrive(DRIVE_SPEED, -10, 10, 10, -10, 1.0); // strafe left
+      //open gripper/place cone
+      gripperMotor.setPosition(-1.0);
+      // encoderDrive(DRIVE_SPEED, -74, -74, -74, -74, 2.5); // drive backwards
+      // encoderDrive(DRIVE_SPEED, 15, -15, -15, 15, 1.0); // strafe right
 
 
       telemetry.addData("Path", "Complete");
