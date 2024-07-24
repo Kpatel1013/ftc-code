@@ -23,9 +23,9 @@ public class AutoOpMode extends LinearOpMode {
    // For example, use a value of 2.0 for a 12-tooth spur gear driving a 24-tooth spur gear.
    // This is gearing DOWN for less speed and more torque.
    // For gearing UP, use a gear ratio less than 1.0. Note this will affect the direction of wheel rotation.
-   static final double     COUNTS_PER_MOTOR_REV    = 312.0;  
+   static final double     COUNTS_PER_MOTOR_REV    = 1497.0;  
    static final double     DRIVE_GEAR_REDUCTION    = 1.0;     // No External Gearing.
-   static final double     WHEEL_DIAMETER_INCHES   = 1.4;     // For figuring circumference
+   static final double     WHEEL_DIAMETER_INCHES   = 3.8;     // For figuring circumference
    static final double     COUNTS_PER_INCH         = (COUNTS_PER_MOTOR_REV * DRIVE_GEAR_REDUCTION) /
                                                       (WHEEL_DIAMETER_INCHES * 3.1415);
    static final double     DRIVE_SPEED             = 0.6;
@@ -71,32 +71,32 @@ public class AutoOpMode extends LinearOpMode {
       // Wait for the game to start (driver presses PLAY)
       waitForStart();
 
-      encoderDrive(DRIVE_SPEED, 69, 69, 69, 69, 1.0); // drive forward
-      encoderDrive(DRIVE_SPEED, -14, 14, 14, -14, 1.0); // strafe left
+      encoderDrive(DRIVE_SPEED, 69, 69, 69, 69, 2.5); // drive forward
+      encoderDrive(DRIVE_SPEED, -10, 10, 10, -10, 1.0); // strafe left
       // //open gripper/place 
       // gripperMotor.setPosition(-1.0);
-      encoderDrive(DRIVE_SPEED, -60, -60, -60, -60, 1.0); // drive backwards
-      encoderDrive(DRIVE_SPEED, 12, -12, -12, 12, 1.0); // strafe right
-      encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
-      //close gripper/grab cone
-      // gripperMotor.setPosition(1.0);
-      encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
-      encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
-      encoderDrive(DRIVE_SPEED, -22, 22, 22, -22, 1.0); // strafe left
-      //open gripper/place cone
-      // gripperMotor.setPosition(-1.0);
-      encoderDrive(DRIVE_SPEED, -69, -69, -69, -69, 1.0); // drive backwards
-      encoderDrive(DRIVE_SPEED, 20, -20, -20, 20, 1.0); // strafe right
-      encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
-      //close gripper/grab cone
-      // gripperMotor.setPosition(1.0);
-      encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
-      encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
-      encoderDrive(DRIVE_SPEED, -30, 30, 30, -30, 1.0); // strafe left
-      //open gripper/place cone
-      // gripperMotor.setPosition(-1.0);
-      encoderDrive(DRIVE_SPEED, -69, -69, -69, -69, 1.0); // drive backwards
-      encoderDrive(DRIVE_SPEED, 30, -30, -30, 30, 1.0); // strafe right
+      // encoderDrive(DRIVE_SPEED, -60, -60, -60, -60, 1.0); // drive backwards
+      // encoderDrive(DRIVE_SPEED, 12, -12, -12, 12, 1.0); // strafe right
+      // encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
+      // //close gripper/grab cone
+      // // gripperMotor.setPosition(1.0);
+      // encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
+      // encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
+      // encoderDrive(DRIVE_SPEED, -22, 22, 22, -22, 1.0); // strafe left
+      // //open gripper/place cone
+      // // gripperMotor.setPosition(-1.0);
+      // encoderDrive(DRIVE_SPEED, -69, -69, -69, -69, 1.0); // drive backwards
+      // encoderDrive(DRIVE_SPEED, 20, -20, -20, 20, 1.0); // strafe right
+      // encoderDrive(TURN_SPEED, 7, -7, 7, -7, 1.0); // turn right
+      // //close gripper/grab cone
+      // // gripperMotor.setPosition(1.0);
+      // encoderDrive(DRIVE_SPEED, -60, 60, 60, -60, 1.0); // strafe left
+      // encoderDrive(DRIVE_SPEED, -7, 7, -7, 7, 1.0); // turn left
+      // encoderDrive(DRIVE_SPEED, -30, 30, 30, -30, 1.0); // strafe left
+      // //open gripper/place cone
+      // // gripperMotor.setPosition(-1.0);
+      // encoderDrive(DRIVE_SPEED, -69, -69, -69, -69, 1.0); // drive backwards
+      // encoderDrive(DRIVE_SPEED, 30, -30, -30, 30, 1.0); // strafe right
 
 
       telemetry.addData("Path", "Complete");
