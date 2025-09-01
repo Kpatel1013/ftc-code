@@ -1,2 +1,2 @@
-# ftc-code-billy
+# ftc-code
 Robotics Internship Code
